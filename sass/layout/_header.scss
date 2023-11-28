@@ -1,0 +1,80 @@
+@use "../base/mixin" as *;
+@use "../base/variables" as *;
+/* start header*/
+.header-area {
+  position: relative;
+  z-index: 2;
+  color: white;
+  .header {
+    height: 5.6em;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    ul {
+      display: flex;
+      li a {
+        margin-right: 40px;
+        color: $secondary-color;
+      }
+      li a.active {
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+    button.contact-btn {
+      @include btn(10px, 35px, 4px, true);
+      transition: 0.3s;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .hero-title {
+      text-align: center;
+      font-size: 3.25em;
+      width: 60%;
+      margin: 0 {
+        top: 80px;
+        bottom: 25px;
+      }
+      font-family: $heads-ff;
+    }
+    .hero-description {
+      margin: 0;
+      font-family: $secondary-ff;
+      text-align: center;
+      width: 60%;
+      font-size: 1.1em;
+    }
+    .feature-items {
+      display: flex;
+      margin-top: 80px;
+      .feature-item {
+        margin-right: 30px;
+        background-color: white;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        padding: 15px 10px;
+        div {
+          color: $primary-color;
+          text-align: center;
+          padding-top: 10px;
+          font: {
+            family: $heads-ff;
+            size: 1.37em;
+            weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* end header*/

@@ -1,0 +1,13 @@
+@use "base/variables" as *;
+
+body {
+  font-family: $main-ff;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
