@@ -1,0 +1,63 @@
+@use "../base/variables" as *;
+.setting-box {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  background: white;
+  z-index: 1000;
+  width: 250px;
+  min-height: 100vh;
+  transition: 0.6s ease-in-out;
+
+  .toggle-settings {
+    position: absolute;
+    top: 130px;
+    padding: 10px;
+    background: white;
+    right: -30px;
+    cursor: pointer;
+    font-size: 20px;
+    i {
+      transition: 0.8s ease-in-out;
+    }
+    .fa-chevron-right.left {
+      transform: rotateY(180deg);
+    }
+  }
+  &.open {
+    left: 0;
+  }
+
+  .option-box {
+    padding: 20px;
+    h4 {
+      margin: 0;
+      color: #5f5f5f;
+    }
+    .colors-list {
+      text-align: center;
+      padding: 0;
+      li {
+        $colors: #001f3f, #3498db, #2ecc71, #ea910c, #d4ac0d;
+        @for $i from 1 through length($colors) {
+          &:nth-child(#{$i}) {
+            background-color: nth($colors, $i);
+          }
+        }
+        width: 20px;
+        height: 20px;
+        background: #333;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0.5;
+        display: inline-block;
+        transition: 0.3s;
+        &.active {
+          margin: 0 2px;
+          border: 3px solid #ccc;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

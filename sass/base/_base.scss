@@ -1,5 +1,7 @@
 @use "base/variables" as *;
-
+:root {
+  --primary-color: #001f3f;
+}
 body {
   font-family: $main-ff;
 }
