@@ -1,4 +1,7 @@
 @use "base/variables" as *;
+* {
+  box-sizing: border-box;
+}
 :root {
   --primary-color: #001f3f;
 }

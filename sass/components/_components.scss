@@ -1,0 +1,14 @@
+@use "../base/variables" as *;
+%randomBgImg {
+  width: 50px;
+  display: inline-block;
+  background-color: #00a6fb;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.5;
+  cursor: pointer;
+}

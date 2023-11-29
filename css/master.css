@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Poppins:wght@400;600&family=Raleway:wght@400;600;700&family=Roboto:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 :root {
   --primary-color: #001f3f;
 }
@@ -117,6 +122,7 @@ a {
   margin-top: 80px;
 }
 .header-area .hero .feature-items .feature-item {
+  cursor: pointer;
   margin-right: 30px;
   background-color: white;
   border-bottom-left-radius: 12px;
@@ -135,6 +141,20 @@ a {
 }
 
 /* end header*/
+.option-box .random-backgrounds .yes, .option-box .random-backgrounds .no {
+  width: 50px;
+  display: inline-block;
+  background-color: #00a6fb;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 .setting-box {
   position: fixed;
   left: -250px;
@@ -167,17 +187,22 @@ a {
   left: 0;
 }
 .setting-box .option-box {
-  padding: 20px;
+  padding: 10px;
+  background: #eee;
+  text-align: center;
+  margin: 10px;
 }
 .setting-box .option-box h4 {
   margin: 0;
   color: #5f5f5f;
 }
-.setting-box .option-box .colors-list {
+
+.option-box .colors-list {
   text-align: center;
   padding: 0;
+  margin: 10px 0 0;
 }
-.setting-box .option-box .colors-list li {
+.option-box .colors-list li {
   width: 20px;
   height: 20px;
   background: #333;
@@ -187,24 +212,32 @@ a {
   display: inline-block;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  border: 3px solid #eee;
 }
-.setting-box .option-box .colors-list li:nth-child(1) {
+.option-box .colors-list li:nth-child(1) {
   background-color: #001f3f;
 }
-.setting-box .option-box .colors-list li:nth-child(2) {
+.option-box .colors-list li:nth-child(2) {
   background-color: #3498db;
 }
-.setting-box .option-box .colors-list li:nth-child(3) {
+.option-box .colors-list li:nth-child(3) {
   background-color: #2ecc71;
 }
-.setting-box .option-box .colors-list li:nth-child(4) {
+.option-box .colors-list li:nth-child(4) {
   background-color: #ea910c;
 }
-.setting-box .option-box .colors-list li:nth-child(5) {
+.option-box .colors-list li:nth-child(5) {
   background-color: #d4ac0d;
 }
-.setting-box .option-box .colors-list li.active {
+.option-box .colors-list li.active {
   margin: 0 2px;
-  border: 3px solid #ccc;
+  border-color: #fff;
+  opacity: 1;
+}
+
+.option-box .random-backgrounds .yes.active {
+  opacity: 1;
+}
+.option-box .random-backgrounds .no.active {
   opacity: 1;
 }
