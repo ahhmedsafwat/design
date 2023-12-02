@@ -12,3 +12,9 @@
   opacity: 0.5;
   cursor: pointer;
 }
+
+%flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Poppins:wght@400;600&family=Raleway:wght@400;600;700&family=Roboto:wght@400;700&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
@@ -22,7 +21,11 @@ li {
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
+}
+
+.container {
+  padding: 0 15px;
 }
 
 /*start landing*/
@@ -52,22 +55,14 @@ a {
 .header-area .header {
   height: 5.6em;
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
 .header-area .header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .header-area .header ul li a {
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   margin-right: 40px;
   color: #8d8d8d;
@@ -83,26 +78,16 @@ a {
   background: #00a6fb;
   color: white;
   cursor: pointer;
-  -webkit-box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.25);
-  -webkit-transition: 0.3s;
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.25);
   transition: 0.3s;
 }
 .header-area .header button.contact-btn:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .header-area .hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 .header-area .hero .hero-title {
   text-align: center;
@@ -121,8 +106,6 @@ a {
   font-size: 1.1em;
 }
 .header-area .hero .feature-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 80px;
 }
@@ -135,7 +118,6 @@ a {
   padding: 15px 10px;
 }
 .header-area .hero .feature-items .feature-item div {
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   color: var(--primary-color);
   text-align: center;
@@ -160,6 +142,12 @@ a {
   cursor: pointer;
 }
 
+.about-us .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .setting-box {
   position: fixed;
   left: -250px;
@@ -168,7 +156,6 @@ a {
   z-index: 1000;
   width: 250px;
   min-height: 100vh;
-  -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
 }
 .setting-box .toggle-settings {
@@ -181,12 +168,10 @@ a {
   font-size: 20px;
 }
 .setting-box .toggle-settings i {
-  -webkit-transition: 0.8s ease-in-out;
   transition: 0.8s ease-in-out;
 }
 .setting-box .toggle-settings .fa-chevron-right.left {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .setting-box.open {
   left: 0;
@@ -215,7 +200,6 @@ a {
   cursor: pointer;
   opacity: 0.5;
   display: inline-block;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   border: 3px solid #eee;
 }
@@ -248,54 +232,35 @@ a {
 }
 
 .our-team {
-  padding: 90px 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 0;
 }
 .our-team h1 {
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   text-align: center;
   color: var(--primary-color);
   font-size: 3.25em;
-  font-faimly: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0;
   margin-bottom: 25px;
 }
 .our-team .team-members {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
 .our-team .team-members .team-member {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   border-radius: 18px;
   border: 1px solid #bcd1e7;
   padding: 25px;
   width: 410px;
 }
 .our-team .team-members .team-member .member-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 10px;
 }
 .our-team .team-members .team-member .member-info .member-image {
@@ -316,7 +281,6 @@ a {
   background-image: url("../images/member-three.jpg");
 }
 .our-team .team-members .team-member .member-info h3 {
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -342,4 +306,35 @@ a {
   margin-right: 15px;
   font-size: 26px;
   cursor: pointer;
+}
+
+.about-us {
+  background-color: #bcd1e7;
+}
+.about-us .container {
+  width: 1300px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.about-us .container .content-box {
+  flex: 1;
+}
+.about-us .container .content-box h2 {
+  color: var(--primary-color);
+  font-size: 3.25em;
+  text-wrap: balance;
+  margin-bottom: 18px;
+}
+.about-us .container .content-box p {
+  margin: 0;
+  color: #767676;
+  padding-right: 110px;
+}
+.about-us .container .content-box p a {
+  color: #767676;
+  text-decoration: underline;
+}
+.about-us .container .imgs-box {
+  flex: 1;
+  text-align: center;
 }

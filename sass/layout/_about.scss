@@ -1,0 +1,36 @@
+@use "../base/base" as *;
+@use "../base/variables" as *;
+@use "../components/components" as *;
+
+.about-us {
+  background-color: #bcd1e7;
+  .container {
+    width: 1300px;
+    @extend %flex-between;
+    margin: 0 auto;
+    padding: 50px 0;
+    .content-box {
+      flex: 1;
+      h2 {
+        color: $primary-color;
+        font-size: 3.25em;
+        text-wrap: balance;
+        margin-bottom: 18px;
+      }
+      p {
+        margin: 0;
+        color: #767676;
+
+        padding-right: 110px;
+        a {
+          color: #767676;
+          text-decoration: underline;
+        }
+      }
+    }
+    .imgs-box {
+      flex: 1;
+      text-align: center;
+    }
+  }
+}
