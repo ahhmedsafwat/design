@@ -113,3 +113,41 @@ activeNavbar.forEach((ele) => {
     e.target.classList.add("active");
   });
 });
+
+// scroll to progress bar
+let ourSkills = document.querySelector(".skills");
+let skillsUpdated = false; // Flag to track whether skills have been updated
+
+window.onscroll = function () {
+  if (!skillsUpdated) {
+    let ourSkillsRect = ourSkills.getBoundingClientRect();
+    let skillsOffsetTop = ourSkillsRect.top;
+    let skillsOuterHeight = ourSkillsRect.height;
+    let windowHeight = this.innerHeight;
+    let windowScrollTop = this.scrollY;
+
+    if (windowScrollTop > skillsOffsetTop + skillsOuterHeight - windowHeight) {
+      const progressnum = document.querySelectorAll(".skill .number");
+      const circle = document.querySelectorAll("svg circle");
+      progressnum.forEach((progress) => {
+        let counter = 0;
+        const numInterval = setInterval(() => {
+          if (counter <= parseInt(progress.dataset.number)) {
+            progress.innerHTML = counter + "%";
+            counter++;
+          } else {
+            clearInterval(numInterval);
+          }
+        }, 25);
+      });
+
+      circle.forEach((circle, index) => {
+        const percentage = parseInt(progressnum[index].dataset.number);
+        const dashoffset = 566 - (566 * percentage) / 100;
+        circle.style.strokeDashoffset = dashoffset;
+      });
+
+      skillsUpdated = true; // Set the flag to true to prevent further updates
+    }
+  }
+};

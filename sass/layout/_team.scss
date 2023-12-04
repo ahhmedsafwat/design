@@ -1,80 +1,76 @@
 @use "../base/variables" as *;
+@use "../base/mixin" as *;
 .our-team {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 90px 0;
-  h1 {
-    transition: 0.3s;
-    text-align: center;
-    color: $primary-color;
-    font: {
-      size: 3.25em;
-      family: $heads-ff;
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+    h1 {
+      @include h1s;
     }
-    margin: 0 {
-      bottom: 25px;
-    }
-  }
-  .team-members {
-    display: flex;
-    gap: 20px;
-    .team-member {
+    .team-members {
       display: flex;
-      flex-direction: column;
-      border-radius: 18px;
-      border: 1px solid #bcd1e7;
-      padding: 25px;
-      width: 410px;
-      .member-info {
+      gap: 20px;
+      .team-member {
         display: flex;
-        align-items: center;
-        gap: 10px;
-        .member-image {
-          width: 56px;
-          height: 56px;
-          background: {
-            size: cover;
-            position: center center;
+        flex-direction: column;
+        border-radius: 18px;
+        border: 1px solid #bcd1e7;
+        padding: 25px;
+        width: 410px;
+        .member-info {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .member-image {
+            width: 56px;
+            height: 56px;
+            background: {
+              size: cover;
+              position: center center;
+            }
+            border-radius: 50%;
+            border: 2px solid #d9d9d9;
           }
-          border-radius: 50%;
-          border: 2px solid #d9d9d9;
+          .mmbr1 {
+            background-image: url("../images/member-one.jpg");
+          }
+          .mmbr2 {
+            background-image: url("../images/member-tow.jpg");
+          }
+          .mmbr3 {
+            background-image: url("../images/member-three.jpg");
+          }
+          h3 {
+            transition: 0.3s;
+            margin: 0;
+            font-family: $heads-ff;
+            font-weight: 700;
+            color: $primary-color;
+            line-height: 1.6;
+          }
+          .role {
+            color: #5f5f5f;
+            font-family: $secondary-ff;
+            font-weight: 400;
+          }
         }
-        .mmbr1 {
-          background-image: url("../images/member-one.jpg");
-        }
-        .mmbr2 {
-          background-image: url("../images/member-tow.jpg");
-        }
-        .mmbr3 {
-          background-image: url("../images/member-three.jpg");
-        }
-        h3 {
-          transition: 0.3s;
-          margin: 0;
-          font-family: $heads-ff;
-          font-weight: 700;
-          color: $primary-color;
-          line-height: 1.6;
-        }
-        .role {
-          color: #5f5f5f;
+        p {
+          color: $secondary-color;
           font-family: $secondary-ff;
-          font-weight: 400;
+          line-height: 1.375;
         }
-      }
-      p {
-        color: $secondary-color;
-        font-family: $secondary-ff;
-        line-height: 1.375;
-      }
-      .socail-icons {
-        margin-top: auto;
-        i {
-          color: #3d445c;
-          margin-right: 15px;
-          font-size: 26px;
-          cursor: pointer;
+        .socail-icons {
+          margin-top: auto;
+          i {
+            color: #3d445c;
+            margin-right: 15px;
+            font-size: 26px;
+            cursor: pointer;
+          }
         }
       }
     }

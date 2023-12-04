@@ -25,7 +25,9 @@ a {
 }
 
 .container {
-  padding: 0 15px;
+  padding: 50px 15px;
+  width: 1300px;
+  margin: 0 auto;
 }
 
 /*start landing*/
@@ -142,7 +144,7 @@ a {
   cursor: pointer;
 }
 
-.about-us .container {
+.skills .box-skills, .about-us .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -237,20 +239,25 @@ a {
   align-items: center;
   padding: 90px 0;
 }
-.our-team h1 {
+.our-team .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.our-team .container h1 {
   transition: 0.3s;
   text-align: center;
   color: var(--primary-color);
+  text-transform: capitalize;
   font-size: 3.25em;
   font-family: "Raleway", sans-serif;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
-.our-team .team-members {
+.our-team .container .team-members {
   display: flex;
   gap: 20px;
 }
-.our-team .team-members .team-member {
+.our-team .container .team-members .team-member {
   display: flex;
   flex-direction: column;
   border-radius: 18px;
@@ -258,12 +265,12 @@ a {
   padding: 25px;
   width: 410px;
 }
-.our-team .team-members .team-member .member-info {
+.our-team .container .team-members .team-member .member-info {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.our-team .team-members .team-member .member-info .member-image {
+.our-team .container .team-members .team-member .member-info .member-image {
   width: 56px;
   height: 56px;
   background-size: cover;
@@ -271,16 +278,16 @@ a {
   border-radius: 50%;
   border: 2px solid #d9d9d9;
 }
-.our-team .team-members .team-member .member-info .mmbr1 {
+.our-team .container .team-members .team-member .member-info .mmbr1 {
   background-image: url("../images/member-one.jpg");
 }
-.our-team .team-members .team-member .member-info .mmbr2 {
+.our-team .container .team-members .team-member .member-info .mmbr2 {
   background-image: url("../images/member-tow.jpg");
 }
-.our-team .team-members .team-member .member-info .mmbr3 {
+.our-team .container .team-members .team-member .member-info .mmbr3 {
   background-image: url("../images/member-three.jpg");
 }
-.our-team .team-members .team-member .member-info h3 {
+.our-team .container .team-members .team-member .member-info h3 {
   transition: 0.3s;
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -288,20 +295,20 @@ a {
   color: var(--primary-color);
   line-height: 1.6;
 }
-.our-team .team-members .team-member .member-info .role {
+.our-team .container .team-members .team-member .member-info .role {
   color: #5f5f5f;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
-.our-team .team-members .team-member p {
+.our-team .container .team-members .team-member p {
   color: #8d8d8d;
   font-family: "Roboto", sans-serif;
   line-height: 1.375;
 }
-.our-team .team-members .team-member .socail-icons {
+.our-team .container .team-members .team-member .socail-icons {
   margin-top: auto;
 }
-.our-team .team-members .team-member .socail-icons i {
+.our-team .container .team-members .team-member .socail-icons i {
   color: #3d445c;
   margin-right: 15px;
   font-size: 26px;
@@ -314,7 +321,6 @@ a {
 .about-us .container {
   width: 1300px;
   margin: 0 auto;
-  padding: 50px 0;
 }
 .about-us .container .content-box {
   flex: 1;
@@ -322,12 +328,16 @@ a {
 .about-us .container .content-box h2 {
   color: var(--primary-color);
   font-size: 3.25em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
   text-wrap: balance;
   margin-bottom: 18px;
 }
 .about-us .container .content-box p {
   margin: 0;
   color: #767676;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   padding-right: 110px;
 }
 .about-us .container .content-box p a {
@@ -336,5 +346,83 @@ a {
 }
 .about-us .container .imgs-box {
   flex: 1;
+  text-align: center;
+}
+
+.skills h1 {
+  transition: 0.3s;
+  text-align: center;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 3.25em;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  margin-bottom: 40px;
+}
+.skills .box-skills .skill {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  border: 1px solid #bcd1e7;
+  width: 350px;
+  height: 440px;
+  position: relative;
+  padding: 20px 20px 40px;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+.skills .box-skills .skill .outer {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: -11px -5px 20px 5px rgba(0, 0, 0, 0.1) inset;
+  position: relative;
+  z-index: 10;
+}
+.skills .box-skills .skill .outer .inner {
+  width: 170px;
+  height: 170px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: -3px 5px 20px 0px rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills .box-skills .skill .outer .inner .number {
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8em;
+}
+.skills .box-skills svg {
+  position: absolute;
+  z-index: 1;
+  transform: rotate(-90deg);
+}
+.skills .box-skills svg circle {
+  stroke: var(--primary-color);
+  stroke-width: 18px;
+  stroke-dasharray: 566;
+  stroke-dashoffset: 566;
+  transition: stroke-dashoffset 2s linear;
+}
+.skills .box-skills .content h3 {
+  font-size: 1.2em;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.skills .box-skills .content p {
+  font-size: 0.9em;
+  color: #8d8d8d;
+  margin: 0;
+  margin-bottom: 30px;
   text-align: center;
 }
