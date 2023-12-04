@@ -1,0 +1,25 @@
+@use "../base/mixin" as *;
+@use "../base/variables" as *;
+
+.gallery {
+  h1 {
+    @include h1s;
+  }
+  .images-box {
+    text-align: center;
+    img {
+      width: 200px;
+      padding: 3px;
+      background-color: #f6f6f6;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      margin: 3px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.9;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
