@@ -1,0 +1,112 @@
+@use "../base/mixin" as *;
+@use "../base/variables" as *;
+
+.timeline {
+  background-color: $primary-color;
+
+  .timeline-content {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background-color: #bcd1e7;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+    .year {
+      margin: 20px auto;
+      width: 50px;
+      background-color: #bcd1e7;
+      position: relative;
+      z-index: 2;
+      border-radius: 4px;
+      text-align: center;
+      padding: 2px 5px;
+      font-weight: bold;
+      font-family: $secondary-ff;
+      color: $primary-color;
+    }
+    .left,
+    .right {
+      width: calc(50% - 25px);
+      margin-bottom: 40px;
+      position: relative;
+      box-shadow: 5px 4px 15px 3px rgba(255, 255, 255, 0.3);
+    }
+    .left {
+      float: left;
+      &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: white;
+        border: 3px solid #bcd1e7;
+        position: absolute;
+        right: -36px;
+        top: 35px;
+      }
+      .content::before {
+        content: "";
+        border-width: 10px;
+        border-color: transparent transparent transparent white;
+        border-style: solid;
+        height: 0;
+        width: 0;
+        position: absolute;
+        right: -19px;
+        top: 35px;
+      }
+    }
+    .right {
+      float: right;
+      &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: white;
+        border: 3px solid #bcd1e7;
+        position: absolute;
+        left: -35px;
+        top: 35px;
+      }
+      .content::before {
+        content: "";
+        border-width: 10px;
+        border-color: transparent white transparent transparent;
+        border-style: solid;
+        height: 0;
+        width: 0;
+        position: absolute;
+        left: -19px;
+        top: 35px;
+      }
+    }
+    .clearfix {
+      clear: both;
+    }
+    .content {
+      padding: 20px;
+      background-color: white;
+      border-radius: 6px;
+
+      h3 {
+        color: $primary-color;
+        font-size: 1.2em;
+        text-transform: capitalize;
+        font-family: $heads-ff;
+        font-weight: 700;
+      }
+      p {
+        color: $secondary-color;
+        margin: 0;
+        line-height: 1.6;
+      }
+    }
+  }
+}
