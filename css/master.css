@@ -73,7 +73,7 @@ a {
   color: var(--primary-color);
   font-weight: bold;
 }
-.header-area .header button.contact-btn {
+.header-area .header a.contact-btn {
   padding: 10px 35px;
   border-radius: 4px;
   border: none;
@@ -84,7 +84,7 @@ a {
   box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.25);
   transition: 0.3s;
 }
-.header-area .header button.contact-btn:hover {
+.header-area .header a.contact-btn:hover {
   box-shadow: none;
 }
 .header-area .hero {
@@ -159,12 +159,12 @@ a {
   line-height: 1.6;
 }
 
-.email-us .container .message-form form .name, .email-us .container .message-form form .email, .email-us .container .message-form form .testarea {
+.contact .container .message-form form .name, .contact .container .message-form form .email, .contact .container .message-form form .testarea {
   border: none;
   outline: none;
 }
 
-.email-us .container .message-form form .name, .email-us .container .message-form form .email, .email-us .container .message-form form .testarea {
+.contact .container .message-form form .name, .contact .container .message-form form .email, .contact .container .message-form form .testarea {
   padding: 15px 20px;
   border-radius: 12px;
   font-family: "Roboto", sans-serif;
@@ -826,19 +826,19 @@ a {
   color: #f2c110;
 }
 
-.email-us {
+.contact {
   background-color: #bcd1e7;
 }
-.email-us .container {
+.contact .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.email-us .container .message-form {
+.contact .container .message-form {
   display: flex;
   flex-direction: column;
 }
-.email-us .container .message-form h3 {
+.contact .container .message-form h3 {
   align-self: flex-end;
   color: #00a6fb;
   text-transform: capitalize;
@@ -849,7 +849,7 @@ a {
   margin-bottom: 15px;
   position: relative;
 }
-.email-us .container .message-form h3::before {
+.contact .container .message-form h3::before {
   content: "";
   background-color: #00a6fb;
   height: 100%;
@@ -857,7 +857,7 @@ a {
   position: absolute;
   right: -10px;
 }
-.email-us .container .message-form p {
+.contact .container .message-form p {
   text-align: end;
   width: 600px;
   margin: 0;
@@ -866,20 +866,20 @@ a {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
-.email-us .container .message-form form {
+.contact .container .message-form form {
   width: 600px;
   display: flex;
   flex-direction: column;
   color: #8d8d8d;
 }
-.email-us .container .message-form form .name {
+.contact .container .message-form form .name {
   margin-top: 30px;
 }
-.email-us .container .message-form form .testarea {
+.contact .container .message-form form .testarea {
   resize: none;
   min-height: 120px;
 }
-.email-us .container .message-form form .submit {
+.contact .container .message-form form .submit {
   padding: 15px 20px;
   border-radius: 12px;
   border: none;
@@ -888,4 +888,57 @@ a {
   width: fit-content;
   color: white;
   width: 100%;
+}
+
+.footer .container {
+  display: flex;
+}
+.footer .container .logo {
+  flex: 3;
+}
+.footer .container .logo .address {
+  width: 200px;
+  color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
+}
+.footer .container h3 {
+  color: var(--primary-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+.footer .container .join-section {
+  flex: 2;
+  color: var(--primary-color);
+}
+.footer .container .join-section .contact-email {
+  margin-bottom: 15px;
+}
+.footer .container .join-section .contact-email a {
+  display: inline;
+}
+.footer .container .join-section a {
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 15px;
+}
+.footer .container .contact-us {
+  flex: 2;
+  color: var(--primary-color);
+}
+.footer .container .contact-us div {
+  margin-bottom: 15px;
+}
+.footer .container .contact-us .socail-icons i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.copy-right {
+  color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding-bottom: 30px;
 }

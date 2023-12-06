@@ -24,7 +24,7 @@
         font-weight: bold;
       }
     }
-    button.contact-btn {
+    a.contact-btn {
       @include btn(10px, 35px, 4px, #00a6fb, true);
       transition: 0.3s;
       &:hover {

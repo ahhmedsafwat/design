@@ -1,0 +1,59 @@
+@use "../base/variables" as *;
+@use "../base/mixin" as *;
+@use "../components/components" as *;
+
+.footer {
+  .container {
+    display: flex;
+    .logo {
+      flex: 3;
+      .address {
+        width: 200px;
+        color: $primary-color;
+        font-family: $secondary-ff;
+        margin-top: 20px;
+      }
+    }
+    h3 {
+      color: $primary-color;
+      font-family: $heads-ff;
+      font-weight: 700;
+      font-size: 22px;
+      text-transform: capitalize;
+    }
+    .join-section {
+      flex: 2;
+      color: $primary-color;
+      .contact-email {
+        margin-bottom: 15px;
+        a {
+          display: inline;
+        }
+      }
+      a {
+        color: $primary-color;
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+    .contact-us {
+      flex: 2;
+      color: $primary-color;
+      div {
+        margin-bottom: 15px;
+      }
+      .socail-icons {
+        i {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+.copy-right {
+  color: $primary-color;
+  font-family: $secondary-ff;
+  text-align: center;
+  padding-bottom: 30px;
+}
