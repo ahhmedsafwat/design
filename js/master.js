@@ -85,7 +85,7 @@ let imgsArray = ["bg-2.jpg", "bg-3.jpg", "bg-5.jpg", "bg-6.jpg", "bg-7.jpg"];
 let imgObjects = [];
 imgsArray.forEach((imgUrl) => {
   const img = new Image();
-  img.src = `../images/${imgUrl}`;
+  img.src = `images/${imgUrl}`;
   imgObjects.push(img);
 });
 
