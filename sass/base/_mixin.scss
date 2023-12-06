@@ -1,9 +1,9 @@
 @use "variables" as *;
-@mixin btn($vp, $hp, $br, $box-shadow: false) {
+@mixin btn($vp, $hp, $br, $bg-color, $box-shadow: false) {
   padding: $vp $hp;
   border-radius: $br;
   border: none;
-  background: #00a6fb;
+  background: $bg-color;
   color: white;
   cursor: pointer;
   @if ($box-shadow == true) {

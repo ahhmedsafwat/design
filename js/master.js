@@ -98,7 +98,7 @@ function randomizeBackground() {
       landingPage.style.transition =
         "background-image .6s cubic-bezier(0.4, 0, 1, 1) 0s";
       landingPage.style.backgroundImage = `url('${imgObjects[randomNumber].src}')`;
-    }, 10000);
+    }, 4000);
   }
 }
 randomizeBackground();
@@ -191,4 +191,26 @@ document.addEventListener("click", (e) => {
     e.target.parentNode.remove();
     document.querySelector(".popup-overlay").remove();
   }
+});
+
+// testimonials scroll
+const testimonialsScroll = document.querySelectorAll(".testimonials-box");
+const slides = document.querySelectorAll(".arrows i");
+
+let counter = 0;
+
+slides.forEach((slide) => {
+  slide.addEventListener("click", (e) => {
+    if (e.target.classList.contains("left")) {
+      // Check if there are testimonials to the left
+      counter = counter > 0 ? counter - 1 : 0;
+    } else {
+      // Check if there are testimonials to the right
+      counter = counter < testimonialsScroll.length - 1 ? counter + 1 : counter;
+    }
+
+    testimonialsScroll.forEach((testimonial, index) => {
+      testimonial.style.transform = `translateX(${-counter * 330}px)`;
+    });
+  });
 });

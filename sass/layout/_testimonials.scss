@@ -1,0 +1,102 @@
+@use "../base/variables" as *;
+@use "../base/mixin" as *;
+@use "../components/components" as *;
+
+.testimonials {
+  padding: 50px 0 50px 100px;
+  display: flex;
+
+  .context-box {
+    flex: 1;
+    h3 {
+      color: #00a6fb;
+      text-transform: capitalize;
+      font: {
+        size: 2em;
+        family: $secondary-ff;
+        weight: 700;
+      }
+      margin: 0 {
+        bottom: 15px;
+      }
+      position: relative;
+      &::before {
+        content: "";
+        background-color: #00a6fb;
+        height: 100px;
+        width: 4px;
+        position: absolute;
+        left: -30px;
+        // border-radius: 4px;
+      }
+    }
+    p {
+      margin: 0;
+      color: $primary-color;
+      font: {
+        size: 2.5em;
+        family: $secondary-ff;
+        weight: 700;
+      }
+    }
+    .arrows {
+      margin-top: 120px;
+      i {
+        width: 70px;
+        height: 70px;
+        padding: 20px 0;
+        background-color: #d9d9d9;
+        color: #001f3f;
+        border-radius: 50%;
+        font-size: 30px;
+        margin-right: 20px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+  .testimonials-boxs {
+    display: flex;
+    position: relative;
+    right: 0;
+    flex: 1;
+    max-width: 930px;
+    overflow-x: hidden;
+    .testimonials-box {
+      transition: 0.6s ease-in-out;
+      margin: 0 {
+        right: 16px;
+        left: 16px;
+      }
+      padding: 20px;
+      border-radius: 20px;
+      min-width: 430px;
+
+      &:nth-of-type(even) {
+        background-color: $testimonials-secondary-bg-color;
+      }
+      background-color: $testimonials-primary-bg-color;
+      p {
+        color: $testimonials-secondary-color;
+        font-family: $testimonials-ff;
+        font-size: 1.75em;
+        margin: 35px 0;
+      }
+      .clients {
+        padding: 12px 25px;
+        background-color: $testimonials-secondary-color;
+        color: $testimonials-secondary-bg-color;
+        width: fit-content;
+        border-radius: 6px;
+      }
+    }
+
+    .testimonials-box {
+      &:nth-child(odd) .clients {
+        &:nth-child(odd) {
+          color: $testimonials-primary-bg-color;
+        }
+      }
+    }
+  }
+}

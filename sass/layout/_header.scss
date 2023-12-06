@@ -25,7 +25,7 @@
       }
     }
     button.contact-btn {
-      @include btn(10px, 35px, 4px, true);
+      @include btn(10px, 35px, 4px, #00a6fb, true);
       transition: 0.3s;
       &:hover {
         box-shadow: none;

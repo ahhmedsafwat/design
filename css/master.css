@@ -723,3 +723,88 @@ a {
 .services .cyber-security .container .images-box .team-member {
   box-shadow: 2px 4px 14px 0px rgba(0, 0, 0, 0.2);
 }
+
+.testimonials {
+  padding: 50px 0 50px 100px;
+  display: flex;
+}
+.testimonials .context-box {
+  flex: 1;
+}
+.testimonials .context-box h3 {
+  color: #00a6fb;
+  text-transform: capitalize;
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 15px;
+  position: relative;
+}
+.testimonials .context-box h3::before {
+  content: "";
+  background-color: #00a6fb;
+  height: 100px;
+  width: 4px;
+  position: absolute;
+  left: -30px;
+}
+.testimonials .context-box p {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 2.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.testimonials .context-box .arrows {
+  margin-top: 120px;
+}
+.testimonials .context-box .arrows i {
+  width: 70px;
+  height: 70px;
+  padding: 20px 0;
+  background-color: #d9d9d9;
+  color: #001f3f;
+  border-radius: 50%;
+  font-size: 30px;
+  margin-right: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.testimonials .testimonials-boxs {
+  display: flex;
+  position: relative;
+  right: 0;
+  flex: 1;
+  max-width: 930px;
+  overflow-x: hidden;
+}
+.testimonials .testimonials-boxs .testimonials-box {
+  transition: 0.6s ease-in-out;
+  margin: 0;
+  margin-right: 16px;
+  margin-left: 16px;
+  padding: 20px;
+  border-radius: 20px;
+  min-width: 430px;
+  background-color: #f2c110;
+}
+.testimonials .testimonials-boxs .testimonials-box:nth-of-type(even) {
+  background-color: #f44900;
+}
+.testimonials .testimonials-boxs .testimonials-box p {
+  color: #19281d;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.75em;
+  margin: 35px 0;
+}
+.testimonials .testimonials-boxs .testimonials-box .clients {
+  padding: 12px 25px;
+  background-color: #19281d;
+  color: #f44900;
+  width: fit-content;
+  border-radius: 6px;
+}
+.testimonials .testimonials-boxs .testimonials-box:nth-child(odd) .clients:nth-child(odd) {
+  color: #f2c110;
+}
