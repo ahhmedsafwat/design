@@ -35,7 +35,7 @@ a {
   min-height: 100vh;
   padding-bottom: 120px;
   position: relative;
-  background-image: url("../../images/bg-2.jpg");
+  background-image: url("../images/bg-2.jpg");
   background-size: cover;
 }
 .landing-page .overlay {
