@@ -6,7 +6,7 @@
   padding: 50px 0 50px 100px;
   display: flex;
 
-  .context-box {
+  .content-box {
     flex: 1;
     h3 {
       color: #00a6fb;
@@ -83,11 +83,8 @@
         margin: 35px 0;
       }
       .clients {
-        padding: 12px 25px;
-        background-color: $testimonials-secondary-color;
+        @include btn(12px, 25px, 6px, $testimonials-secondary-color, false);
         color: $testimonials-secondary-bg-color;
-        width: fit-content;
-        border-radius: 6px;
       }
     }
 

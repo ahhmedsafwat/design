@@ -78,8 +78,9 @@ a {
   border-radius: 4px;
   border: none;
   background: #00a6fb;
-  color: white;
   cursor: pointer;
+  width: fit-content;
+  color: white;
   box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.25);
   transition: 0.3s;
 }
@@ -150,6 +151,27 @@ a {
   justify-content: space-between;
 }
 
+.services .service .container .content-box p, .services .service .container .content-box span, .services .service .container .content-box ul {
+  color: #d7d7d7;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.email-us .container .message-form form .name, .email-us .container .message-form form .email, .email-us .container .message-form form .testarea {
+  border: none;
+  outline: none;
+}
+
+.email-us .container .message-form form .name, .email-us .container .message-form form .email, .email-us .container .message-form form .testarea {
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
 .popup-overlay {
   width: 100%;
   height: 100%;
@@ -194,14 +216,6 @@ a {
   background-color: var(--primary-color);
   text-align: center;
   border-radius: 50%;
-}
-
-.services .service .container .content-box p, .services .service .container .content-box span, .services .service .container .content-box ul {
-  color: #d7d7d7;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
 }
 
 .setting-box {
@@ -728,10 +742,10 @@ a {
   padding: 50px 0 50px 100px;
   display: flex;
 }
-.testimonials .context-box {
+.testimonials .content-box {
   flex: 1;
 }
-.testimonials .context-box h3 {
+.testimonials .content-box h3 {
   color: #00a6fb;
   text-transform: capitalize;
   font-size: 2em;
@@ -741,7 +755,7 @@ a {
   margin-bottom: 15px;
   position: relative;
 }
-.testimonials .context-box h3::before {
+.testimonials .content-box h3::before {
   content: "";
   background-color: #00a6fb;
   height: 100px;
@@ -749,17 +763,17 @@ a {
   position: absolute;
   left: -30px;
 }
-.testimonials .context-box p {
+.testimonials .content-box p {
   margin: 0;
   color: var(--primary-color);
   font-size: 2.5em;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
-.testimonials .context-box .arrows {
+.testimonials .content-box .arrows {
   margin-top: 120px;
 }
-.testimonials .context-box .arrows i {
+.testimonials .content-box .arrows i {
   width: 70px;
   height: 70px;
   padding: 20px 0;
@@ -800,11 +814,78 @@ a {
 }
 .testimonials .testimonials-boxs .testimonials-box .clients {
   padding: 12px 25px;
-  background-color: #19281d;
-  color: #f44900;
-  width: fit-content;
   border-radius: 6px;
+  border: none;
+  background: #19281d;
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  color: #f44900;
 }
 .testimonials .testimonials-boxs .testimonials-box:nth-child(odd) .clients:nth-child(odd) {
   color: #f2c110;
+}
+
+.email-us {
+  background-color: #bcd1e7;
+}
+.email-us .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.email-us .container .message-form {
+  display: flex;
+  flex-direction: column;
+}
+.email-us .container .message-form h3 {
+  align-self: flex-end;
+  color: #00a6fb;
+  text-transform: capitalize;
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 15px;
+  position: relative;
+}
+.email-us .container .message-form h3::before {
+  content: "";
+  background-color: #00a6fb;
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  right: -10px;
+}
+.email-us .container .message-form p {
+  text-align: end;
+  width: 600px;
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 3.25em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.email-us .container .message-form form {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  color: #8d8d8d;
+}
+.email-us .container .message-form form .name {
+  margin-top: 30px;
+}
+.email-us .container .message-form form .testarea {
+  resize: none;
+  min-height: 120px;
+}
+.email-us .container .message-form form .submit {
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #00a6fb;
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  width: 100%;
 }

@@ -1,0 +1,72 @@
+@use "../base/variables" as *;
+@use "../base/mixin" as *;
+@use "../components/components" as *;
+.email-us {
+  background-color: #bcd1e7;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .message-form {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        align-self: flex-end;
+        color: #00a6fb;
+        text-transform: capitalize;
+        font: {
+          size: 2em;
+          family: $secondary-ff;
+          weight: 700;
+        }
+        margin: 0 {
+          bottom: 15px;
+        }
+        position: relative;
+        &::before {
+          content: "";
+          background-color: #00a6fb;
+          height: 100%;
+          width: 4px;
+          position: absolute;
+          right: -10px;
+          // border-radius: 4px;
+        }
+      }
+      p {
+        text-align: end;
+        width: 600px;
+        margin: 0;
+        color: $primary-color;
+        font: {
+          size: 3.25em;
+          family: $secondary-ff;
+          weight: 700;
+        }
+      }
+      form {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        color: #8d8d8d;
+        .name {
+          @extend %input-styling;
+          margin-top: 30px;
+        }
+        .email {
+          @extend %input-styling;
+        }
+        .testarea {
+          @extend %input-styling;
+          resize: none;
+          min-height: 120px;
+        }
+        .submit {
+          @include btn(15px, 20px, 12px, #00a6fb, false);
+          width: 100%;
+        }
+      }
+    }
+  }
+}
