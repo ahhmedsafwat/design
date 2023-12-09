@@ -159,12 +159,12 @@ a {
   line-height: 1.6;
 }
 
-.contact .container .message-form form .name, .contact .container .message-form form .email, .contact .container .message-form form .testarea {
+.contact .container .message-form form .name, .contact .container .message-form form .email, .contact .container .message-form form .textarea {
   border: none;
   outline: none;
 }
 
-.contact .container .message-form form .name, .contact .container .message-form form .email, .contact .container .message-form form .testarea {
+.contact .container .message-form form .name, .contact .container .message-form form .email, .contact .container .message-form form .textarea {
   padding: 15px 20px;
   border-radius: 12px;
   font-family: "Roboto", sans-serif;
@@ -255,6 +255,18 @@ a {
 .setting-box .option-box h4 {
   margin: 0;
   color: #5f5f5f;
+}
+.setting-box .reset-options {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background: #f44336;
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  margin: 10px auto;
+  display: block;
+  width: 80%;
 }
 
 .option-box .colors-list {
@@ -875,9 +887,17 @@ a {
 .contact .container .message-form form .name {
   margin-top: 30px;
 }
-.contact .container .message-form form .testarea {
+.contact .container .message-form form .textarea {
   resize: none;
   min-height: 120px;
+}
+.contact .container .message-form form .textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: 0.2s;
+}
+.contact .container .message-form form .textarea:focus::-ms-input-placeholder {
+  opacity: 0;
+  transition: 0.2s;
 }
 .contact .container .message-form form .submit {
   padding: 15px 20px;
@@ -934,6 +954,9 @@ a {
 .footer .container .contact-us .socail-icons i {
   font-size: 20px;
   margin-right: 10px;
+}
+.footer .container .contact-us .info-em a {
+  color: var(--primary-color);
 }
 
 .copy-right {

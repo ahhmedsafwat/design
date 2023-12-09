@@ -32,6 +32,7 @@
             <span class="no" data-background="no">No</span>
           </div>
         </div>
+        <button class="reset-options">Reset Options</button>
       </div>
     </section>
     <!-- end setting box -->
@@ -554,10 +555,27 @@
             any questions? Write or call us. We will write back within 24 hour
           </p>
           <form action="">
-            <input type="text" placeholder="your name" class="name" />
-            <input type="email" placeholder="Jhon@gmail.com" class="email" />
-            <textarea placeholder="message" class="testarea"></textarea>
-            <input type="submit" value="submit" class="submit" />
+            <input
+              type="text"
+              placeholder="your name"
+              class="name"
+              name="usename"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Jhon@gmail.com"
+              class="email"
+              name="email"
+              required
+            />
+            <textarea
+              placeholder="message"
+              class="textarea"
+              name="message"
+              required
+            ></textarea>
+            <input type="submit" value="submit" class="submit" name="submit" />
           </form>
         </div>
       </div>

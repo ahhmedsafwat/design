@@ -26,10 +26,7 @@ colorsLi.forEach((ele) => {
       e.target.dataset.color
     );
     localStorage.setItem("color-option", e.target.dataset.color);
-    e.target.parentElement.querySelectorAll(".active").forEach((ele) => {
-      ele.classList.remove("active");
-    });
-    e.target.classList.add("active");
+    handelActive(e);
   });
 });
 
@@ -95,8 +92,7 @@ function randomizeBackground() {
     // change background image url
     bgInterval = setInterval(() => {
       let randomNumber = Math.floor(Math.random() * imgObjects.length);
-      landingPage.style.transition =
-        "background-image .6s cubic-bezier(0.4, 0, 1, 1) 0s";
+      landingPage.style.transition = "background-image .6s linear";
       landingPage.style.backgroundImage = `url('${imgObjects[randomNumber].src}')`;
     }, 4000);
   }
@@ -214,3 +210,19 @@ slides.forEach((slide) => {
     });
   });
 });
+
+//reset button
+document.querySelector(".reset-options").onclick = function () {
+  // localStorage.clear();
+  localStorage.removeItem("color-option");
+  localStorage.removeItem("background-option");
+  window.location.reload();
+};
+
+function handelActive(ev) {
+  ev.target.parentElement
+    .querySelectorAll(".active")
+    .forEach((element) => element.classList.remove("active"));
+
+  ev.target.classList.add("active");
+}

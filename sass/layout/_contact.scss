@@ -57,10 +57,14 @@
         .email {
           @extend %input-styling;
         }
-        .testarea {
+        .textarea {
           @extend %input-styling;
           resize: none;
           min-height: 120px;
+          @include placeholderdisapper {
+            opacity: 0;
+            transition: 0.2s;
+          }
         }
         .submit {
           @include btn(15px, 20px, 12px, #00a6fb, false);
