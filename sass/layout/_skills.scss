@@ -24,7 +24,7 @@
         border-radius: 50%;
         box-shadow: -11px -5px 20px 5px rgba(0, 0, 0, 0.1) inset;
         position: relative;
-        z-index: 10;
+        // z-index: 10;
         .inner {
           width: 170px;
           height: 170px;
@@ -53,7 +53,7 @@
 
       circle {
         stroke: $primary-color;
-        stroke-width: 18px;
+        stroke-width: 13px;
         stroke-dasharray: 566;
         stroke-dashoffset: 566;
         transition: stroke-dashoffset 2s linear;

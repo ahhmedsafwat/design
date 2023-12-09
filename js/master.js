@@ -219,10 +219,23 @@ document.querySelector(".reset-options").onclick = function () {
   window.location.reload();
 };
 
+//toggleMenu
+const navbar = document.querySelector("nav");
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", () => {
+  toggleMenu(navbar);
+});
+
 function handelActive(ev) {
   ev.target.parentElement
     .querySelectorAll(".active")
     .forEach((element) => element.classList.remove("active"));
 
   ev.target.classList.add("active");
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("nav-bar");
+  hamburger.classList.toggle("change");
 }

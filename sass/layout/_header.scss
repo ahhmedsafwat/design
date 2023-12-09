@@ -1,34 +1,129 @@
 @use "../base/mixin" as *;
 @use "../base/variables" as *;
-/* start header*/
+
 .header-area {
   position: relative;
   z-index: 2;
   color: white;
   .header {
+    width: 100%;
     height: 5.6em;
     background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    ul {
-      display: flex;
-      li a {
-        transition: 0.3s;
-        margin-right: 40px;
-        color: $secondary-color;
-      }
-      li a.active {
-        color: $primary-color;
-        font-weight: bold;
+    @include desktop {
+      & {
+        position: fixed;
+        top: 0;
+        justify-content: space-between;
+        padding: 0 35px;
       }
     }
-    a.contact-btn {
-      @include btn(10px, 35px, 4px, #00a6fb, true);
-      transition: 0.3s;
-      &:hover {
-        box-shadow: none;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(70% - 130px);
+      ul {
+        display: flex;
+        li a {
+          transition: 0.3s;
+          margin-right: 40px;
+          color: $secondary-color;
+        }
+        li a.active {
+          color: $primary-color;
+          font-weight: bold;
+        }
+      }
+      a.contact-btn {
+        @include btn(10px, 35px, 4px, #00a6fb, true);
+        transition: 0.3s;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+    .hamburger {
+      display: none;
+      width: 50px;
+      padding: 4px;
+      cursor: pointer;
+      .bar {
+        width: 100%;
+        height: 5px;
+        background: $primary-color;
+        display: block;
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
+      #bar1 {
+        transform: translateY(-4px);
+      }
+      #bar3 {
+        transform: translateY(4px);
+      }
+      &.change {
+        #bar1 {
+          transform: translateY(5px) rotateZ(-45deg);
+        }
+        #bar2 {
+          opacity: 0;
+        }
+        #bar3 {
+          transform: translateY(-5px) rotateZ(45deg);
+        }
+      }
+    }
+    @include desktop {
+      nav.nav-bar {
+        right: -260px;
+      }
+      nav {
+        display: flex;
+        width: 260px;
+        min-height: 100vh;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transition: 0.3s;
+        background-color: white;
+        padding: 70px 0;
+
+        ul {
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+          width: 80%;
+          margin-bottom: 30px;
+          li {
+            margin-bottom: 10px;
+            a {
+              padding: 12px 10px;
+              display: inline-block;
+              margin: 0;
+              width: 100%;
+            }
+          }
+          li a.active {
+            width: 100%;
+            border-radius: 12px;
+            background-color: #f0f1f6ff;
+          }
+        }
+        a.contact-btn {
+          width: 80%;
+          text-align: center;
+        }
+      }
+      .hamburger {
+        display: block;
+        z-index: 1;
+        position: fixed;
+        right: 30px;
+        top: 25px;
       }
     }
   }
@@ -79,5 +174,3 @@
     }
   }
 }
-
-/* end header*/
