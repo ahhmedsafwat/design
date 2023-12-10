@@ -11,11 +11,28 @@ if (mainColor != null) {
   });
 }
 // toggle class on click
-document.querySelector(".toggle-settings").onclick = function () {
-  document.querySelector(".toggle-settings i").classList.toggle("left");
-  document.querySelector(".setting-box").classList.toggle("open");
-};
+const toggleSetting = document.querySelector(".toggle-settings");
+const settingBox = document.querySelector(".setting-box");
+toggleSetting.addEventListener("click", () => {
+  settingToggle();
+});
 
+function settingToggle() {
+  document.querySelector(".toggle-settings i").classList.toggle("left");
+  settingBox.classList.toggle("open");
+}
+document.addEventListener("click", (event) => {
+  // Check if the clicked element is outside the navigation menu and hamburger
+  if (
+    !settingBox.contains(event.target) &&
+    !toggleSetting.contains(event.target)
+  ) {
+    // Close the menu if it's open
+    if (settingBox.classList.contains("open")) {
+      settingToggle();
+    }
+  }
+});
 // switch colors
 const colorsLi = document.querySelectorAll(".colors-list li");
 
@@ -224,18 +241,27 @@ const navbar = document.querySelector("nav");
 const hamburger = document.querySelector(".hamburger");
 
 hamburger.addEventListener("click", () => {
-  toggleMenu(navbar);
+  toggleMenu();
 });
 
+function toggleMenu() {
+  navbar.classList.toggle("nav-bar");
+  hamburger.classList.toggle("change");
+}
+
+document.addEventListener("click", (event) => {
+  // Check if the clicked element is outside the navigation menu and hamburger
+  if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+    // Close the menu if it's open
+    if (!navbar.classList.contains("nav-bar")) {
+      toggleMenu();
+    }
+  }
+});
 function handelActive(ev) {
   ev.target.parentElement
     .querySelectorAll(".active")
     .forEach((element) => element.classList.remove("active"));
 
   ev.target.classList.add("active");
-}
-
-function toggleMenu(menu) {
-  menu.classList.toggle("nav-bar");
-  hamburger.classList.toggle("change");
 }
