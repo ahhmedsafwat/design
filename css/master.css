@@ -36,16 +36,25 @@ a {
   }
 }
 @media (max-width: 992px) {
+  body {
+    font-size: 15px;
+  }
   .container {
     max-width: 960px;
   }
 }
 @media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
   .container {
     max-width: 720px;
   }
 }
 @media (max-width: 576px) {
+  body {
+    font-size: 13px;
+  }
   .container {
     max-width: 540px;
   }
@@ -218,6 +227,12 @@ a {
   margin-bottom: 25px;
   font-family: "Raleway", sans-serif;
 }
+@media (max-width: 768px) {
+  .header-area .hero .hero-title {
+    font-size: 3em;
+    width: 90%;
+  }
+}
 .header-area .hero .hero-description {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -225,9 +240,20 @@ a {
   width: 60%;
   font-size: 1.1em;
 }
+@media (max-width: 768px) {
+  .header-area .hero .hero-description {
+    width: 90%;
+  }
+}
 .header-area .hero .feature-items {
   display: flex;
   margin-top: 80px;
+}
+@media (max-width: 768px) {
+  .header-area .hero .feature-items {
+    flex-direction: column;
+    gap: 25px;
+  }
 }
 .header-area .hero .feature-items .feature-item {
   cursor: pointer;
@@ -245,6 +271,16 @@ a {
   font-family: "Raleway", sans-serif;
   font-size: 1.37em;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .header-area .hero .feature-items .feature-item {
+    margin: 0;
+  }
+}
+@media (max-width: 576px) {
+  .header-area .hero .feature-items .feature-item img {
+    width: 250px;
+  }
 }
 
 .option-box .random-backgrounds .yes, .option-box .random-backgrounds .no {

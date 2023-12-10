@@ -32,17 +32,26 @@ a {
 }
 
 @include desktop {
+  body {
+    font-size: 15px;
+  }
   .container {
     max-width: 960px;
   }
 }
 
 @include tablet {
+  body {
+    font-size: 14px;
+  }
   .container {
     max-width: 720px;
   }
 }
 @include mobile {
+  body {
+    font-size: 13px;
+  }
   .container {
     max-width: 540px;
   }

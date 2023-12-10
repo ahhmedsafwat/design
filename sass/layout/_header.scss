@@ -141,6 +141,10 @@
         bottom: 25px;
       }
       font-family: $heads-ff;
+      @include tablet {
+        font-size: 3em;
+        width: 90%;
+      }
     }
     .hero-description {
       margin: 0;
@@ -148,10 +152,17 @@
       text-align: center;
       width: 60%;
       font-size: 1.1em;
+      @include tablet {
+        width: 90%;
+      }
     }
     .feature-items {
       display: flex;
       margin-top: 80px;
+      @include tablet {
+        flex-direction: column;
+        gap: 25px;
+      }
       .feature-item {
         cursor: pointer;
         margin-right: 30px;
@@ -168,6 +179,14 @@
             family: $heads-ff;
             size: 1.37em;
             weight: 600;
+          }
+        }
+        @include tablet {
+          margin: 0;
+        }
+        @include mobile {
+          img {
+            width: 250px;
           }
         }
       }
