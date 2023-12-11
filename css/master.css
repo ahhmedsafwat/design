@@ -661,6 +661,19 @@ a {
   margin: 0;
   margin-bottom: 40px;
 }
+@media (max-width: 576px) {
+  .skills h1 {
+    font-size: 2.5em;
+  }
+}
+.skills .box-skills {
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  .skills .box-skills {
+    display: block;
+  }
+}
 .skills .box-skills .skill {
   display: flex;
   flex-direction: column-reverse;
@@ -672,6 +685,18 @@ a {
   padding: 20px 20px 40px;
   justify-content: space-between;
   border-radius: 12px;
+}
+@media (max-width: 992px) {
+  .skills .box-skills .skill {
+    height: 460px;
+  }
+}
+@media (max-width: 768px) {
+  .skills .box-skills .skill {
+    width: 100%;
+    margin-bottom: 30px;
+    height: fit-content;
+  }
 }
 .skills .box-skills .skill .outer {
   width: 200px;

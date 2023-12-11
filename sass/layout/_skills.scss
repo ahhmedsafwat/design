@@ -4,9 +4,16 @@
 .skills {
   h1 {
     @include h1s;
+    @include mobile {
+      font-size: 2.5em;
+    }
   }
   .box-skills {
     @extend %flex-between;
+    gap: 15px;
+    @include tablet {
+      display: block;
+    }
     .skill {
       display: flex;
       flex-direction: column-reverse;
@@ -18,13 +25,20 @@
       padding: 20px 20px 40px;
       justify-content: space-between;
       border-radius: 12px;
+      @include desktop {
+        height: 460px;
+      }
+      @include tablet {
+        width: 100%;
+        margin-bottom: 30px;
+        height: fit-content;
+      }
       .outer {
         width: 200px;
         height: 200px;
         border-radius: 50%;
         box-shadow: -11px -5px 20px 5px rgba(0, 0, 0, 0.1) inset;
         position: relative;
-        // z-index: 10;
         .inner {
           width: 170px;
           height: 170px;
