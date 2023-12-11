@@ -26,7 +26,7 @@ a {
 
 .container {
   padding: 50px 15px;
-  width: 1300px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -498,7 +498,17 @@ a {
   border-radius: 18px;
   border: 1px solid #bcd1e7;
   padding: 25px;
-  width: 410px;
+  min-width: 380px;
+}
+@media (max-width: 1200px) {
+  .our-team .container .team-members .team-member {
+    min-width: 295px;
+  }
+}
+@media (max-width: 576px) {
+  .our-team .container .team-members .team-member {
+    min-width: 275px;
+  }
 }
 .our-team .container .team-members .team-member .member-info {
   display: flex;
@@ -558,16 +568,11 @@ a {
 }
 @media (max-width: 992px) {
   .our-team .container .team-members .team-member {
-    padding: 25px 15px;
-  }
-}
-@media (max-width: 768px) {
-  .our-team .container .team-members .team-member {
     width: 100%;
     padding: 20px 25px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .our-team .container .team-members {
     flex-direction: column;
   }
@@ -582,19 +587,29 @@ a {
   background-color: #bcd1e7;
 }
 .about-us .container {
-  width: 1300px;
   margin: 0 auto;
 }
-.about-us .container .content-box {
-  flex: 1;
+@media (max-width: 992px) {
+  .about-us .container {
+    display: block;
+  }
 }
 .about-us .container .content-box h2 {
+  transition: 0.3s;
+  text-align: center;
   color: var(--primary-color);
+  text-transform: capitalize;
   font-size: 3.25em;
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
+  margin: 0;
+  margin-bottom: 40px;
   text-wrap: balance;
   margin-bottom: 18px;
+}
+@media (max-width: 576px) {
+  .about-us .container .content-box h2 {
+    font-size: 2.5em;
+  }
 }
 .about-us .container .content-box p {
   margin: 0;
@@ -603,13 +618,37 @@ a {
   font-weight: 400;
   padding-right: 110px;
 }
+@media (max-width: 992px) {
+  .about-us .container .content-box p {
+    padding: 0 30px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .about-us .container .content-box p {
+    font-size: 1em;
+    width: 90%;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto 40px;
+  }
+}
 .about-us .container .content-box p a {
   color: #767676;
   text-decoration: underline;
 }
 .about-us .container .imgs-box {
-  flex: 1;
   text-align: center;
+}
+@media (max-width: 1200px) {
+  .about-us .container .imgs-box img {
+    width: 480px;
+  }
+}
+@media (max-width: 576px) {
+  .about-us .container .imgs-box img {
+    width: 250px;
+  }
 }
 
 .skills h1 {

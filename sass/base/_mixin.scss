@@ -50,6 +50,7 @@
 }
 
 // media queries
+
 @mixin mobile {
   @media (max-width: $mobile) {
     @content;
