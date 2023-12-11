@@ -789,10 +789,22 @@ a {
   width: calc(50% - 25px);
   margin-bottom: 40px;
   position: relative;
-  box-shadow: 5px 4px 15px 3px rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 576px) {
+  .timeline .timeline-content .left,
+  .timeline .timeline-content .right {
+    border-top: 15px solid var(--primary-color);
+  }
 }
 .timeline .timeline-content .left {
   float: left;
+}
+@media (max-width: 576px) {
+  .timeline .timeline-content .left {
+    width: 100%;
+    margin-top: 50px;
+    float: none;
+  }
 }
 .timeline .timeline-content .left::before {
   content: "";
@@ -805,6 +817,13 @@ a {
   right: -36px;
   top: 35px;
 }
+@media (max-width: 576px) {
+  .timeline .timeline-content .left::before {
+    top: -35px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
 .timeline .timeline-content .left .content::before {
   content: "";
   border-width: 10px;
@@ -816,8 +835,22 @@ a {
   right: -19px;
   top: 35px;
 }
+@media (max-width: 576px) {
+  .timeline .timeline-content .left .content::before {
+    border-color: transparent transparent white transparent;
+    top: -18px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
 .timeline .timeline-content .right {
   float: right;
+}
+@media (max-width: 576px) {
+  .timeline .timeline-content .right {
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 .timeline .timeline-content .right::before {
   content: "";
@@ -830,6 +863,13 @@ a {
   left: -35px;
   top: 35px;
 }
+@media (max-width: 576px) {
+  .timeline .timeline-content .right::before {
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 .timeline .timeline-content .right .content::before {
   content: "";
   border-width: 10px;
@@ -840,6 +880,14 @@ a {
   position: absolute;
   left: -19px;
   top: 35px;
+}
+@media (max-width: 576px) {
+  .timeline .timeline-content .right .content::before {
+    border-color: transparent transparent white transparent;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .timeline .timeline-content .clearfix {
   clear: both;

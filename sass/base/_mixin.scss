@@ -11,6 +11,11 @@
     box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.25);
   }
 }
+@mixin centerPosHorizontaly($direction, $top, $translate) {
+  top: $top;
+  #{$direction}: 50%;
+  transform: translateX($translate);
+}
 @mixin h1s {
   transition: 0.3s;
   text-align: center;
