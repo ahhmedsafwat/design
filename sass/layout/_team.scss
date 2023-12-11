@@ -34,6 +34,10 @@
             }
             border-radius: 50%;
             border: 2px solid #d9d9d9;
+            @include desktop {
+              width: 50px;
+              height: 50px;
+            }
           }
           .mmbr1 {
             background-image: url("../images/member-one.jpg");
@@ -73,6 +77,20 @@
             cursor: pointer;
           }
         }
+
+        @include desktop {
+          padding: 25px 15px;
+        }
+        @include tablet {
+          width: 100%;
+          padding: 20px 25px;
+        }
+      }
+      @include tablet {
+        flex-direction: column;
+      }
+      @include mobile {
+        align-items: center;
       }
     }
   }

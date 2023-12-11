@@ -142,8 +142,8 @@
       }
       font-family: $heads-ff;
       @include tablet {
-        font-size: 3em;
-        width: 90%;
+        font-size: 2em;
+        width: 100%;
       }
     }
     .hero-description {
@@ -154,6 +154,7 @@
       font-size: 1.1em;
       @include tablet {
         width: 90%;
+        font-size: 1em;
       }
     }
     .feature-items {

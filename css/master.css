@@ -229,8 +229,8 @@ a {
 }
 @media (max-width: 768px) {
   .header-area .hero .hero-title {
-    font-size: 3em;
-    width: 90%;
+    font-size: 2em;
+    width: 100%;
   }
 }
 .header-area .hero .hero-description {
@@ -243,6 +243,7 @@ a {
 @media (max-width: 768px) {
   .header-area .hero .hero-description {
     width: 90%;
+    font-size: 1em;
   }
 }
 .header-area .hero .feature-items {
@@ -512,6 +513,12 @@ a {
   border-radius: 50%;
   border: 2px solid #d9d9d9;
 }
+@media (max-width: 992px) {
+  .our-team .container .team-members .team-member .member-info .member-image {
+    width: 50px;
+    height: 50px;
+  }
+}
 .our-team .container .team-members .team-member .member-info .mmbr1 {
   background-image: url("../images/member-one.jpg");
 }
@@ -548,6 +555,27 @@ a {
   margin-right: 15px;
   font-size: 26px;
   cursor: pointer;
+}
+@media (max-width: 992px) {
+  .our-team .container .team-members .team-member {
+    padding: 25px 15px;
+  }
+}
+@media (max-width: 768px) {
+  .our-team .container .team-members .team-member {
+    width: 100%;
+    padding: 20px 25px;
+  }
+}
+@media (max-width: 768px) {
+  .our-team .container .team-members {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .our-team .container .team-members {
+    align-items: center;
+  }
 }
 
 .about-us {
