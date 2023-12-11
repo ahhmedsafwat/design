@@ -217,13 +217,15 @@ slides.forEach((slide) => {
     if (e.target.classList.contains("left")) {
       // Check if there are testimonials to the left
       counter = counter > 0 ? counter - 1 : 0;
+      console.log(counter);
     } else {
       // Check if there are testimonials to the right
       counter = counter < testimonialsScroll.length - 1 ? counter + 1 : counter;
+      console.log(counter);
     }
 
     testimonialsScroll.forEach((testimonial, index) => {
-      testimonial.style.transform = `translateX(${-counter * 330}px)`;
+      testimonial.style.transform = `translateX(${-counter * 100}%)`;
     });
   });
 });

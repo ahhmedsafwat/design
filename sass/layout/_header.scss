@@ -22,9 +22,10 @@
     }
     nav {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-      width: calc(70% - 130px);
+      width: 70%;
+
       ul {
         display: flex;
         li a {

@@ -5,7 +5,9 @@
 .testimonials {
   padding: 50px 0 50px 100px;
   display: flex;
-
+  @include tablet {
+    flex-direction: column;
+  }
   .content-box {
     flex: 1;
     h3 {
@@ -41,6 +43,9 @@
     }
     .arrows {
       margin-top: 120px;
+      @include tablet {
+        margin-left: 20px;
+      }
       i {
         width: 70px;
         height: 70px;
@@ -62,6 +67,10 @@
     flex: 1;
     max-width: 930px;
     overflow-x: hidden;
+    @include tablet {
+      margin-top: 50px;
+      max-width: 430px;
+    }
     .testimonials-box {
       transition: 0.6s ease-in-out;
       margin: 0 {
@@ -71,7 +80,9 @@
       padding: 20px;
       border-radius: 20px;
       min-width: 430px;
-
+      @include desktop {
+        min-width: 340px;
+      }
       &:nth-of-type(even) {
         background-color: $testimonials-secondary-bg-color;
       }
