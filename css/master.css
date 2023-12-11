@@ -612,6 +612,7 @@ a {
   margin-bottom: 40px;
   text-wrap: balance;
   margin-bottom: 18px;
+  text-align: start;
 }
 @media (max-width: 576px) {
   .about-us .container .content-box h2 {
