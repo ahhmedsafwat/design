@@ -953,6 +953,18 @@ a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 992px) {
+  .services .service .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 992px) {
+  .services .service .container .content-box {
+    text-align: center;
+    width: 100%;
+  }
+}
 .services .service .container .content-box h1 {
   transition: 0.3s;
   text-align: center;
@@ -968,15 +980,50 @@ a {
   margin: 0;
   margin-bottom: 20px;
 }
+@media (max-width: 1200px) {
+  .services .service .container .content-box h1 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 992px) {
+  .services .service .container .content-box h1 {
+    text-align: center;
+    width: 100%;
+  }
+}
 .services .service .container .content-box p {
   width: 600px;
+}
+@media (max-width: 1200px) {
+  .services .service .container .content-box p {
+    font-size: 1em;
+    width: 80%;
+  }
+}
+@media (max-width: 992px) {
+  .services .service .container .content-box p {
+    text-align: center;
+    width: 100%;
+  }
 }
 .services .service .container .content-box ul {
   width: 700px;
   padding-left: 25px;
+  text-wrap: balance;
+}
+@media (max-width: 1200px) {
+  .services .service .container .content-box ul {
+    font-size: 1em;
+    width: 80%;
+  }
 }
 .services .service .container .content-box ul li {
   list-style-type: disc;
+}
+@media (max-width: 992px) {
+  .services .service .container .content-box ul li {
+    text-align: start;
+  }
 }
 .services .service .container .images-box {
   position: relative;
@@ -989,16 +1036,34 @@ a {
 .services .service .container .images-box .image img {
   width: 100%;
 }
+@media (max-width: 576px) {
+  .services .service .container .images-box .image {
+    display: none;
+  }
+}
 .services .service .container .images-box .team-member {
   display: flex;
   flex-direction: column;
   border-radius: 18px;
   background-color: white;
   padding: 25px;
-  width: 460px;
+  max-width: 460px;
   position: relative;
   top: -120px;
-  left: -110px;
+  left: -90px;
+}
+@media (max-width: 768px) {
+  .services .service .container .images-box .team-member {
+    left: 0;
+    width: 430px;
+  }
+}
+@media (max-width: 576px) {
+  .services .service .container .images-box .team-member {
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 }
 .services .service .container .images-box .team-member .member-info {
   display: flex;
