@@ -7,10 +7,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include largeDesktop {
+      flex-direction: column;
+    }
+    .gif-image {
+      img {
+        width: 100%;
+      }
+    }
     .message-form {
       display: flex;
       flex-direction: column;
-
+      @include tablet {
+        padding: 0 20px;
+      }
       h3 {
         align-self: flex-end;
         color: #00a6fb;
@@ -31,12 +41,19 @@
           width: 4px;
           position: absolute;
           right: -10px;
-          // border-radius: 4px;
+
+          @include largeDesktop {
+            right: 0;
+            left: -10px;
+          }
+        }
+        @include largeDesktop {
+          align-self: flex-start;
         }
       }
       p {
         text-align: end;
-        width: 600px;
+        max-width: 600px;
         margin: 0;
         color: $primary-color;
         font: {
@@ -44,12 +61,19 @@
           family: $secondary-ff;
           weight: 700;
         }
+        @include largeDesktop {
+          text-align: start;
+        }
+        @include tablet {
+          font-size: 2em;
+        }
       }
       form {
-        width: 600px;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
         color: #8d8d8d;
+
         .name {
           @extend %input-styling;
           margin-top: 30px;

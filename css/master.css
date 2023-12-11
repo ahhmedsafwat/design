@@ -1251,9 +1251,22 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 1200px) {
+  .contact .container {
+    flex-direction: column;
+  }
+}
+.contact .container .gif-image img {
+  width: 100%;
+}
 .contact .container .message-form {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 768px) {
+  .contact .container .message-form {
+    padding: 0 20px;
+  }
 }
 .contact .container .message-form h3 {
   align-self: flex-end;
@@ -1274,17 +1287,38 @@ a {
   position: absolute;
   right: -10px;
 }
+@media (max-width: 1200px) {
+  .contact .container .message-form h3::before {
+    right: 0;
+    left: -10px;
+  }
+}
+@media (max-width: 1200px) {
+  .contact .container .message-form h3 {
+    align-self: flex-start;
+  }
+}
 .contact .container .message-form p {
   text-align: end;
-  width: 600px;
+  max-width: 600px;
   margin: 0;
   color: var(--primary-color);
   font-size: 3.25em;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
+@media (max-width: 1200px) {
+  .contact .container .message-form p {
+    text-align: start;
+  }
+}
+@media (max-width: 768px) {
+  .contact .container .message-form p {
+    font-size: 2em;
+  }
+}
 .contact .container .message-form form {
-  width: 600px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   color: #8d8d8d;
